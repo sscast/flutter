@@ -162,7 +162,7 @@ class MultidexProject extends Project {
   apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
   android {
-      compileSdkVersion 30
+      compileSdkVersion 31
 
       compileOptions {
           sourceCompatibility JavaVersion.VERSION_1_8
@@ -266,7 +266,7 @@ class MultidexProject extends Project {
     <!-- Theme applied to the Android Window while the process is starting -->
     <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
         <!-- Show a splash screen on the activity. Automatically removed when
-             Flutter draws its first frame -->
+             the Flutter engine draws its first frame -->
         <item name="android:windowBackground">@drawable/launch_background</item>
     </style>
     <!-- Theme applied to the Android Window as soon as the process has started.

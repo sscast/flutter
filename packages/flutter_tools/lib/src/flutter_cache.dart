@@ -18,7 +18,7 @@ import 'base/process.dart';
 import 'cache.dart';
 import 'dart/package_map.dart';
 import 'dart/pub.dart';
-import 'globals_null_migrated.dart' as globals;
+import 'globals.dart' as globals;
 
 /// An implementation of the [Cache] which provides all of Flutter's default artifacts.
 class FlutterCache extends Cache {
@@ -870,10 +870,13 @@ const List<List<String>> _windowsUwpDesktopBinaryDirs = <List<String>>[
 
 const List<List<String>> _macOSDesktopBinaryDirs = <List<String>>[
   <String>['darwin-x64', 'darwin-x64/FlutterMacOS.framework.zip'],
+  <String>['darwin-x64', 'darwin-x64/gen_snapshot.zip'],
   <String>['darwin-x64-profile', 'darwin-x64-profile/FlutterMacOS.framework.zip'],
   <String>['darwin-x64-profile', 'darwin-x64-profile/artifacts.zip'],
+  <String>['darwin-x64-profile', 'darwin-x64-profile/gen_snapshot.zip'],
   <String>['darwin-x64-release', 'darwin-x64-release/FlutterMacOS.framework.zip'],
   <String>['darwin-x64-release', 'darwin-x64-release/artifacts.zip'],
+  <String>['darwin-x64-release', 'darwin-x64-release/gen_snapshot.zip'],
 ];
 
 const List<List<String>> _osxBinaryDirs = <List<String>>[

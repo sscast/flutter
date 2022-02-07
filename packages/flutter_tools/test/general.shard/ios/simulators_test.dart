@@ -14,7 +14,7 @@ import 'package:flutter_tools/src/build_info.dart';
 import 'package:flutter_tools/src/devfs.dart';
 import 'package:flutter_tools/src/device.dart';
 import 'package:flutter_tools/src/device_port_forwarder.dart';
-import 'package:flutter_tools/src/globals_null_migrated.dart' as globals;
+import 'package:flutter_tools/src/globals.dart' as globals;
 import 'package:flutter_tools/src/ios/application_package.dart';
 import 'package:flutter_tools/src/ios/plist_parser.dart';
 import 'package:flutter_tools/src/ios/simulators.dart';
@@ -917,7 +917,12 @@ Dec 20 17:04:32 md32-11-vm1 Another App[88374]: Ignore this text'''
       testPlistParser.setProperty('CFBundleIdentifier', 'correct');
 
       final Directory mockDir = globals.fs.currentDirectory;
-      final IOSApp package = PrebuiltIOSApp(projectBundleId: 'incorrect', bundleName: 'name', bundleDir: mockDir);
+      final IOSApp package = PrebuiltIOSApp(
+        projectBundleId: 'incorrect',
+        bundleName: 'name',
+        uncompressedBundle: mockDir,
+        applicationPackage: mockDir,
+      );
 
       const BuildInfo mockInfo = BuildInfo(BuildMode.debug, 'flavor', treeShakeIcons: false);
       final DebuggingOptions mockOptions = DebuggingOptions.disabled(mockInfo);
@@ -940,7 +945,12 @@ Dec 20 17:04:32 md32-11-vm1 Another App[88374]: Ignore this text'''
       );
 
       final Directory mockDir = globals.fs.currentDirectory;
-      final IOSApp package = PrebuiltIOSApp(projectBundleId: 'incorrect', bundleName: 'name', bundleDir: mockDir);
+      final IOSApp package = PrebuiltIOSApp(
+        projectBundleId: 'incorrect',
+        bundleName: 'name',
+        uncompressedBundle: mockDir,
+        applicationPackage: mockDir,
+      );
 
       const BuildInfo mockInfo = BuildInfo(BuildMode.debug, 'flavor', treeShakeIcons: false);
       final DebuggingOptions mockOptions = DebuggingOptions.disabled(mockInfo);
@@ -967,7 +977,12 @@ Dec 20 17:04:32 md32-11-vm1 Another App[88374]: Ignore this text'''
       testPlistParser.setProperty('CFBundleIdentifier', 'correct');
 
       final Directory mockDir = globals.fs.currentDirectory;
-      final IOSApp package = PrebuiltIOSApp(projectBundleId: 'correct', bundleName: 'name', bundleDir: mockDir);
+      final IOSApp package = PrebuiltIOSApp(
+        projectBundleId: 'correct',
+        bundleName: 'name',
+        uncompressedBundle: mockDir,
+        applicationPackage: mockDir,
+      );
 
       const BuildInfo mockInfo = BuildInfo(BuildMode.debug, 'flavor', treeShakeIcons: false);
       final DebuggingOptions mockOptions = DebuggingOptions.enabled(mockInfo, enableSoftwareRendering: true);
