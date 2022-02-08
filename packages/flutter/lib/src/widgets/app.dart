@@ -1678,17 +1678,9 @@ class _WidgetsAppState extends State<WidgetsApp> with WidgetsBindingObserver {
           child: DefaultTextEditingShortcuts(
             child: Actions(
               actions: widget.actions ?? WidgetsApp.defaultActions,
-<<<<<<< HEAD
-	      child: DefaultTextEditingActions(
-                child: FocusTraversalGroup(
-                  policy: ReadingOrderTraversalPolicy(),
-                  child: child,
-                ),
-=======
               child: FocusTraversalGroup(
                 policy: ReadingOrderTraversalPolicy(),
                 child: child,
->>>>>>> ba01ec8faae9a9be3cd90ee2b7357a803b7a7178
               ),
             ),
           ),
