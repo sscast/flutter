@@ -2752,11 +2752,7 @@ targets:
 
   - name: Mac module_test_ios
     recipe: devicelab/devicelab_drone
-<<<<<<< HEAD
-    bringup: true # Flaky https://github.com/flutter/flutter/issues/93517
-=======
     bringup: true # Flaky https://github.com/flutter/flutter/issues/89175
->>>>>>> b0e323cc64b04c76b531dc203ebba26044052e42
     timeout: 60
     properties:
       caches: >-
